@@ -1,0 +1,78 @@
+//Accordion
+.accordion {
+  border: 1px solid #dbdbdb;
+  border-radius: 10px;
+  background: #fafafa;
+
+  .card {
+    border-radius: 10px;
+    border: 0;
+  }
+
+  .card-header {
+    background-color: rgba(246, 247, 246, 0.3);
+    padding: 0;
+    border-bottom: 0;
+  }
+
+  .card-header:first-child {
+    border-radius: 10px;
+  }
+
+  .card-body {
+    background: #f5f6f6;
+    padding: 1px;
+    border-bottom: 1px solid #dbdbdb;
+  }
+
+  .btn-link {
+    color: $colorFont;
+    text-decoration: none;
+    padding: 8px 10px 5px 20px;
+    border: 0;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+  }
+
+
+  .btn-link[aria-expanded='true'] {
+    color: $colorSuccess;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    background: #f5f6f6;
+    border-top: 1px solid #dbdbdb;
+    border-radius: 0;
+    padding: 25px 20px 5px;
+    font-weight: 700;
+  }
+
+  .accordion-list li {
+    list-style-type: none;
+    padding-bottom: 15px;
+    font-weight: 700;
+    font-size: 14px;
+
+    &:after {
+      content: '>';
+      color: $colorSuccess;
+      padding-left: 5px;
+      position: relative;
+      top: 2px;
+    }
+  }
+
+  .card:first-of-type .btn-link[aria-expanded='true'] {
+     border-top: 0;
+     border-top-left-radius: 10px;
+     border-top-right-radius: 10px;
+   }
+
+  .card:last-of-type .card-body {
+    border-bottom: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}

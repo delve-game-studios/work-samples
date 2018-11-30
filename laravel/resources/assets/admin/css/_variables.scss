@@ -1,0 +1,45 @@
+$colorFont: #2e2e2e;
+$colorPrimary: #0070c9;
+$colorSecondary: #6c757d;
+$colorSuccess: #01ad41;
+$colorDanger: #e74c3c;
+$colorWarning: #ffc107;
+$colorInfo: #17a2b8;
+$colorLight: #f8f9fa;
+$colorWhite: #ffffff;
+$colorDark: #343a40;
+$bgColor: #fcfcfc;
+$lightColorSuccess: #00bb45;
+$colorGray: #e0e0e0;
+$colorForm: #c9d3cd;
+$darkGray: #7a7a7a;
+
+$theme-colors: (
+        primary: $colorPrimary,
+        secondary: $colorSecondary,
+        success: $colorSuccess,
+        danger: $colorDanger,
+        warning: $colorWarning,
+        info: $colorInfo,
+        light: $colorLight,
+        dark: $colorDark,
+);
+
+$grid-breakpoints: (
+        xs: 0,
+        smm: 375px,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px
+);
+
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1140px
+);
+
+$rem-baseline: 16px;
+

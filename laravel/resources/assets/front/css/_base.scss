@@ -1,0 +1,127 @@
+@import "variables";
+* {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+}
+
+html {
+  height: 100%;
+  @include rem-baseline;
+
+  @include media-breakpoint-down(lg) {
+    @include rem-baseline(85%);
+  }
+
+  @include media-breakpoint-only(smm) {
+    @include rem-baseline(75%);
+  }
+}
+body {
+    line-height: 1.5;
+    font-family: 'Comfortaa', cursive;
+    background-color: $bgColor;
+    color: $colorFont;
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+  @media (max-width: 576px) {
+    padding: 0 20px !important;
+  }
+}
+
+.italic-font{
+  font-family: 'Merriweather', serif;
+  font-weight: 400;
+}
+
+.header-text {
+  font-size: 70px;
+  font-weight: 700;
+  @include media-breakpoint-down(md) {
+    font-size: 36px;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 28px;
+  }
+}
+
+.header-text-small {
+  font-size: 50px;
+  font-weight: 700;
+
+  @include media-breakpoint-down(md) {
+    font-size: 36px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 28px;
+  }
+}
+
+.hidden {
+  opacity: 0 !important;
+  z-index: -1;
+}
+
+.shown {
+  opacity: 1;
+}
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block;
+}
+
+.green-line {
+  width: 40px;
+  height: 3px;
+  display: inline-block;
+  background: $colorSuccess;
+}
+
+.gray-text {
+  color: $colorGray;
+}
+
+.darker-text{
+  color: $darkGray;
+}
+
+.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.Site-content {
+  flex: 1;
+}
+
+.border-spacing{
+  border-bottom: 1px solid #dee2e6;
+  margin: 70px 0;
+  @include media-breakpoint-down(lg) {
+    margin: 50px 0;
+  }
+  @include media-breakpoint-down(md) {
+    margin: 35px 0;
+  }
+}
+
+.border-spacing-small{
+  border-bottom: 1px solid #dee2e6;
+  margin: 40px 0;
+}
+
+.rounded-img{
+  border-radius: 6px;
+  box-shadow: 3px 18px 59px -30px rgba(0, 0, 0, 0.75);
+}

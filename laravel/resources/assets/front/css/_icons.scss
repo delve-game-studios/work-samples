@@ -1,0 +1,232 @@
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: inherit;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  @include media-breakpoint-down(md) {
+    display: inline-flex;
+  }
+
+  &--close {
+    border-radius: 50%;
+    border: 1px solid $colorWhite;
+
+    img {
+      width: 8px;
+    }
+
+    svg {
+      width: 8px;
+      fill: $colorWhite;
+    }
+  }
+
+  &--close-green {
+    border-radius: 50%;
+    border: 1px solid $colorSuccess;
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all .2s;
+    svg {
+      width: 8px;
+      fill: $colorSuccess;
+    }
+  }
+
+  &--order {
+    width: 16px;
+    svg {
+      width: 16px;
+      fill: $colorSuccess;
+    }
+  }
+
+  &--order-white {
+    width: 16px;
+    svg {
+      width: 16px;
+      fill: $colorWhite;
+    }
+  }
+
+  &--bin {
+    position: absolute;
+    display: none;
+    right: 13px;
+    top: 45%;
+    transform: translateY(-50%);
+    z-index: 11;
+
+    svg {
+      width: 16px;
+      fill: $colorDanger;
+    }
+  }
+
+  &--arrow-left,
+  &--arrow-right,
+  &--arrow-left-small,
+  &--arrow-right-small {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid $lightColorSuccess;
+    box-shadow: none;
+    &:hover {
+      background: $lightColorSuccess;
+      border: 1px solid $lightColorSuccess;
+      svg{
+        fill: $colorWhite;
+      }
+    }
+    svg {
+      width: 16px;
+      fill: $colorSuccess;
+    }
+  }
+
+  &--arrow-right svg,
+  &--arrow-right-small svg {
+    transform: rotate(180deg)
+  }
+
+  &--arrow-left-small,
+  &--arrow-right-small {
+    width: 40px;
+    height: 40px;
+
+    svg {
+      width: 14px;
+    }
+  }
+
+
+  &--search{
+    background-color: #f1f1f1;
+    cursor: pointer;
+    //margin-left: 30px;
+    border-radius: 6px;
+    height: 43px;
+    width: 43px;
+    transition: all .2s;
+
+    svg{
+      width: 24px;
+      fill: $colorSuccess;
+    }
+  }
+
+  &--back-arrow {
+    width: 8px;
+    height: 16px;
+    svg {
+      width: 16px;
+      fill: $colorSuccess;
+    }
+  }
+
+  &--fb, &--twitter, &--google {
+    width: 40px;
+    height: 40px;
+    background-color: #3b5998;
+    border-radius: 10px;
+    svg {
+      width: 11px;
+      fill: $colorWhite;
+    }
+  }
+
+  &--twitter {
+    background-color: #1dcaff;
+    svg {
+      width: 22px;
+      fill: $colorWhite;
+    }
+  }
+
+  &--google {
+    background-color: #d34836;
+    svg {
+      width: 25px;
+      fill: $colorWhite;
+    }
+  }
+
+  &--download {
+    svg {
+      width: 14px;
+      fill: $colorWhite;
+    }
+  }
+
+  &--send {
+    svg {
+      width: 16px;
+      fill: $colorWhite;
+    }
+  }
+
+  &--quote {
+    width: 38px;
+    svg {
+      width: 38px;
+      fill: $colorSuccess;
+    }
+  }
+
+  &--text {
+    width: 16px;
+    svg {
+      width: 16px;
+      fill: $colorWhite;
+    }
+  }
+
+  &--play {
+    width: 32px;
+    svg {
+      width: 32px;
+      fill: $colorWhite;
+    }
+  }
+
+  &--arrow-down {
+    width: 17px;
+    svg {
+      width: 17px;
+      fill: $colorWhite;
+    }
+  }
+
+  &--arrow-up {
+    width: 17px;
+    svg {
+      width: 17px;
+      fill: $colorWhite;
+      transform: rotate(180deg);
+    }
+  }
+
+  &--more{
+    width: 24px;
+    svg {
+      width: 24px;
+      fill: $colorWhite;
+    }
+  }
+
+  &--search-to-close{
+    width: 28px;
+    svg {
+      width: 28px;
+      fill: $colorSuccess;
+    }
+  }
+
+}

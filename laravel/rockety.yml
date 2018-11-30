@@ -1,0 +1,39 @@
+options:
+    livereloadPort: 35730
+    babelPolyfill: false
+    autoprefixer:
+        browsers:
+            - last 2 versions
+    svgInline: false
+    watch:
+        - resources/views/**/*.blade.php:
+            - reload
+        - src/common/**/*.{scss}:
+            - css
+sources:
+    main:
+        src: resources/assets/front
+        dest: public/assets/front
+        css:
+            main: main.scss
+            vendor:
+                - node_modules/ekko-lightbox/dist/ekko-lightbox.css
+        js:
+            main: main.js
+            vendor:
+                - node_modules/jquery/dist/jquery.min.js
+                - node_modules/bootstrap/dist/js/bootstrap.bundle.min.js
+                - node_modules/ekko-lightbox/dist/ekko-lightbox.min.js
+    admin:
+        src: resources/assets/admin
+        dest: public/assets/admin
+        css:
+            main: main.scss
+        js:
+            main: main.js
+            vendor:
+            - node_modules/jquery/dist/jquery.min.js
+            - node_modules/bootstrap/dist/js/bootstrap.bundle.min.js
+            - node_modules/@coreui/coreui/dist/js/coreui.min.js
+            - node_modules/jquery-serializejson/jquery.serializejson.min.js
+            - node_modules/alloyeditor/dist/alloy-editor/alloy-editor-all-min.js

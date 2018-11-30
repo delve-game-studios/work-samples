@@ -1,0 +1,21 @@
+.footer {
+  width: 100%;
+  font-size: 14px;
+  background: $bgColor;
+  z-index: 1;
+  margin-top: 180px;
+  .nav {
+    box-shadow: none !important;
+    width: fit-content;
+    margin: 0 auto;
+
+    .nav-item {
+      list-style: none;
+
+      a {
+        color: rgba(147, 147, 147, 1);
+        text-decoration: none;
+      }
+    }
+  }
+}

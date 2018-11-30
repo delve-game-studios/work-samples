@@ -1,0 +1,18 @@
+# Deployment target directory
+deploy_target=./
+
+# The number of releases to keep on the server for rollbacks
+keep_releases=4
+
+# List of shared files and folders which are kept between releases
+shared=(
+    storage
+    .env
+)
+
+# SERVERS
+staging_host=jetspark.io
+staging_port=2202
+staging_user=activ.jetspark.io
+staging_key=~/.ssh/id_rsa
+staging_dir=/var/www/activ.jetspark.io

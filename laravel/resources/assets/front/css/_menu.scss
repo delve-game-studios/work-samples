@@ -1,0 +1,178 @@
+nav.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0px 5px 30px 5px rgba(0, 0, 0, 0.08);
+  z-index: 9999;
+  font-size: 16px;
+  height: 100px;
+  background: $colorWhite;
+
+  @include media-breakpoint-down(md) {
+    position: unset;
+    height: auto;
+    padding: 20px;
+  }
+
+
+  .nav-item {
+    cursor: pointer;
+    padding-right: 3px;
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 5px;
+    }
+
+    .nav-link {
+      color: #2e2e2e;
+      font-weight: 700;
+      padding: 10px 17px;
+      transition: all .2s;
+      border-radius: 6px;
+
+
+      @include media-breakpoint-down(lg) {
+        padding: 10px 5px !important;
+      }
+
+      @include media-breakpoint-down(md) {
+        font-size: 15px;
+      }
+    }
+
+    &:hover, &.active {
+
+      .nav-link {
+        background-color: $colorSuccess;
+        color: #ffffff;
+      }
+    }
+  }
+
+
+  .dropdown-link {
+
+    .nav-link{
+
+      @include media-breakpoint-down(md) {
+        border-radius: 0;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+      }
+    }
+
+    .dropdown-links {
+      position: absolute;
+      display: none;
+      width: 310px;
+      padding: 20px;
+      background: rgba(33, 37, 41, 0.9);
+      border-top: 28px solid $colorWhite;
+      transition: all 0s ease;
+      transform: translate(-30%, 0);
+
+      @include media-breakpoint-down(md) {
+        position: relative;
+        background: rgb(33, 37, 41);
+        border-top: 0;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        text-align: center;
+        width: auto;
+        transform: none;
+      }
+
+      a {
+        color: $colorWhite;
+        display: block;
+        padding: 0.25rem 1.5rem;
+
+        &:hover{
+          text-decoration: none;
+          color: $colorSuccess;
+        }
+      }
+    }
+
+    &:hover > .dropdown-links {
+      display: block;
+      opacity: 1;
+    }
+  }
+
+  .logo {
+    margin-top: -4px;
+  }
+
+  .search-button-nav {
+
+    .nav-link {
+      padding: 0;
+    }
+  }
+  .navbar-toggler:focus {
+    outline: 0;
+  }
+}
+
+.search-field {
+  position: relative;
+  width: 97%;
+  left: 25px;
+  top: 0;
+  opacity: 1;
+  transition: opacity 500ms;
+
+  @include media-breakpoint-up(lg) {
+    position: absolute;
+  }
+
+  input {
+    width: 100%;
+    padding: 12.5px 43px 12.5px 18px;
+    font-size: 12px;
+    border-radius: 5px;
+    box-shadow: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: none;
+
+    &:focus{
+      outline: 0;
+    }
+  }
+
+  .close-icon {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    right: 0;
+    bottom: 0;
+    color: $colorSuccess;
+    padding: 9px 15.66px;
+    cursor: pointer;
+  }
+}
+
+// Making the first 2 elements of the navbar always to be with uppercase
+.navbar-light {
+    .navbar-nav {
+        > .nav-item:nth-child(1) > .nav-link {
+            text-transform: uppercase !important;
+        }
+        > .nav-item:nth-child(2) > .nav-link {
+            text-transform: uppercase !important;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

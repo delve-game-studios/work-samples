@@ -1,0 +1,337 @@
+ .logo {
+    width: 108px;
+    height: 31px;
+  }
+  //  ======== INDEX PAGE =========
+  .intro {
+    margin-top: 100px;
+
+    @include media-breakpoint-down(lg) {
+      margin-top: 10px;
+    }
+  }
+
+    .products{
+
+      .info {
+          margin-top: -30px;
+      }
+
+      .price {
+          font-size: 26px;
+          position: relative;
+          bottom: 100px;
+          left: 35px;
+
+          @include media-breakpoint-down(lg) {
+                font-size: 22px;
+          }
+
+          @include media-breakpoint-down(sm) {
+                font-size: 18px;
+                bottom: 80px;
+          }
+      }
+    }
+    .news-container {
+
+      .news-image {
+        position: relative;
+        max-width: 100%;
+        box-shadow: 3px 18px 59px -30px rgba(0, 0, 0, 0.75);
+        cursor: pointer;
+        border-radius: 6px;
+        overflow: hidden;
+
+        &__view-more {
+          position: absolute;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          transition: opacity .2s;
+          text-transform: uppercase;
+          color: $colorWhite;
+          opacity: 0;
+          background: #00bb45;
+        }
+      }
+
+      h5 {
+        transition: color .2s;
+      }
+
+      &:hover {
+
+        h5 {
+          color: $colorSuccess;
+        }
+
+        .news-image__view-more {
+          opacity: 1;
+        }
+      }
+    }
+
+  .why-active {
+
+    img {
+      max-width: 90%;
+      position: absolute;
+      bottom: -30px;
+      right: -30px;
+
+      @include media-breakpoint-down(lg) {
+        position: relative;
+        bottom: 50px;
+      }
+
+      @include media-breakpoint-down(md) {
+        max-width: 50%;
+        right: 0;
+      }
+    }
+  }
+  //  ======== AUDIT PAGE =========
+
+  .header-image {
+    background: url('/assets/front/img/headers/accounting-header.png');
+    background-repeat: no-repeat !important;
+    background-size: 100% 100% !important;
+    width: 100%;
+    height: 334px;
+
+    @include media-breakpoint-down(md) {
+      height: 177px;
+    }
+  }
+
+  //  ======== REPORT PAGE =========
+  .file-content, .file-content-inner {
+    background: $colorWhite;
+    border: 1px solid #dbdbdb;
+    border-radius: 6px;
+    padding: 23px 25px;
+    cursor: pointer;
+    color: $colorFont;
+
+    &:hover .gray-text {
+      color: $colorSuccess;
+      font-weight: bold;
+    }
+    @include media-breakpoint-down(md) {
+      padding: 15px 25px;
+      width: 90%;
+      text-align: center;
+    }
+    a {
+      color: $colorFont;
+      display: contents;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .file-content-inner {
+    width: 90%;
+
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+  }
+
+  .toggle-text:before{
+    content: 'Отвори';
+  }
+
+  .file-content[aria-expanded='true'] > .toggle-text:before{
+    content: 'Затвори';
+  }
+
+  //  ======== PRESS PAGE =========
+  .read-more-link {
+    color: $colorSuccess;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 22px;
+    &:hover {
+      color: $lightColorSuccess;
+      text-decoration: none;
+    }
+    &:after {
+      content: '>';
+      color: $colorSuccess;
+      padding-left: 8px;
+    }
+  }
+
+  //  ======== MORE BOOKS PAGE =========
+  .back-link {
+    color: $colorFont;
+    &:hover{
+      text-decoration: none;
+      color: $colorSuccess;
+    }
+  }
+
+  //  ======== YEARBOOK PAGE =========
+  .documents-accordion {
+
+    .card{
+      border: none;
+      background-color: unset;
+    }
+  }
+
+//  ACTIV ACADEMY PAGE
+  .up {
+    position: relative;
+    top: -100px;
+
+    @include media-breakpoint-down(md) {
+      position: unset;
+    }
+  }
+
+  .lectors-container {
+    width: 90%;
+
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+  }
+
+//  CONTACTS PAGE
+  .address {
+    border-radius: 10px;
+    background: $colorWhite;
+  }
+
+  .map-icon{
+    width: 33px;
+    height: 33px;
+  }
+
+
+//  ORDER PAGE
+  .header-content {
+    background: $colorSuccess;
+    position: fixed;
+    width: 100%;
+    top: 87px;
+    z-index: 1111;
+    overflow: scroll;
+
+    @include media-breakpoint-down(md) {
+      position: unset;
+    }
+  }
+
+  .product-list-container {
+    position: relative;
+    top: 140px;
+
+    @include media-breakpoint-down(md) {
+      position: unset;
+    }
+  }
+
+
+//  Search results page
+  .search-header{
+    background: #f4f4f4;
+    padding: 50px 0;
+    margin-top: 37px;
+    height: 250px;
+    @include media-breakpoint-down(md) {
+      margin-top: 0;
+    }
+  }
+
+  .change-border {
+    border-bottom: 1px solid #dee2e6;
+
+    @include media-breakpoint-down(sm) {
+      border: none;
+    }
+  }
+
+//  results
+  .nav-tabs {
+
+    @include media-breakpoint-down(sm) {
+     border: 0;
+    }
+
+    .nav-link {
+      position: relative;
+      top: 8px;
+      color: $colorFont;
+      border-radius: 0;
+      border: none;
+      padding-bottom: 20px;
+      font-weight: 700;
+
+      @include media-breakpoint-down(lg) {
+        top: 6px;
+      }
+
+      @include media-breakpoint-down(md) {
+        padding: 0;
+        top: 21px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        padding: 0 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #dee2e6;
+      }
+    }
+
+    .nav-link.active {
+      background: $bgColor;
+      border: none;
+      color: $colorSuccess;
+      padding-bottom: 20px;
+      border-bottom: 1px solid $colorSuccess;
+    }
+
+
+     .nav-link:hover, .nav-link:focus {
+      border: none;
+      padding-bottom: 20px;
+      border-bottom: 1px solid $colorSuccess;
+    }
+  }
+
+  .folder-icon{
+    width: 34px;
+    height: 36px;
+  }
+
+  .pdf-icon{
+    width: 33px;
+    height: 33px;
+  }
+
+ //LOG IN PAGE
+ .login-container,
+ .password-reset-container {
+
+   .card {
+     padding: 20px;
+     border-radius: 6px;
+   }
+
+   .form-control {
+     padding: 20px 10px;
+   }
+
+   .btn-success{
+     padding: 10px;
+   }
+ }
